@@ -3,3 +3,4 @@ languageCode = 'en-gb'
 title = 'Worcester County Swimming Association'
 sectionPagesMenu = 'main'
 pluralizeListTitles = false
+theme = 'wcsaTheme'

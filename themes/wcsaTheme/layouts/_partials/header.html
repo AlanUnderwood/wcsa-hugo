@@ -1,0 +1,38 @@
+<h1>{{ site.Title }}</h1>
+
+<button id="theme-toggle" class="button is-small" aria-label="Toggle dark mode">
+  <span class="icon">
+    <i id="theme-toggle-icon" class="fas fa-moon"></i>
+  </span>
+</button>
+
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
+<script>
+  (function () {
+    const root = document.documentElement;
+    const btn = document.getElementById("theme-toggle");
+    const icon = document.getElementById("theme-toggle-icon");
+    const mql = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function applyIcon(theme) {
+      icon.classList.toggle("fa-moon", theme === "light");
+      icon.classList.toggle("fa-sun", theme === "dark");
+    }
+
+    function setTheme(theme) {
+      root.setAttribute("data-theme", theme);
+      applyIcon(theme);
+    }
+
+    // Reflect whatever theme the head script already applied
+    setTheme(root.getAttribute("data-theme") || (mql.matches ? "dark" : "light"));
+
+    // Manual toggle always sets an explicit preference, overriding the OS setting
+    btn.addEventListener("click", function () {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", next);
+      setTheme(next);
+    });
+  })();
+</script>
