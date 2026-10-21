@@ -1,5 +1,5 @@
 baseURL = 'https://worcestercountyswim.org/'
-languageCode = 'en-gb'
+locale = 'en-gb'
 title = 'Worcester County Swimming Association'
 sectionPagesMenu = 'main'
 pluralizeListTitles = false

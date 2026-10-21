@@ -13,24 +13,35 @@ Renders a menu for the given menu ID.
 {{- with index site.Menus $menuID }}
   <nav class="navbar" role="navigation">
     <div class="navbar-brand">
-    <a class="navbar-item" href="{{ site.BaseURL }}">
-      <span style="font-weight: bold; border: 3px solid #422bc6;">WCSA</span>
-    </a>
+      <a class="navbar-item" href="{{ site.BaseURL }}">
+        <span style="font-weight: bold; border: 3px solid #422bc6;">WCSA</span>
+      </a>
     </div>
-    <ul>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
+    <div class="navbar-menu is-active">
+      <ul class="navbar-start is-flex">
+        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+      </ul>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <button id="theme-toggle" class="button is-small" aria-label="Toggle dark mode">
+            <span class="icon">
+              <i id="theme-toggle-icon" class="fas fa-moon"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
   </nav>
 {{- end }}
 
 {{- define "_partials/inline/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
-    {{- $attrs := dict "href" .URL }}
+    {{- $attrs := dict "href" .URL "class" "navbar-item" }}
     {{- if $page.IsMenuCurrent .Menu . }}
-      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+      {{- $attrs = merge $attrs (dict "class" "navbar-item active" "aria-current" "page") }}
     {{- else if $page.HasMenuCurrent .Menu .}}
-      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+      {{- $attrs = merge $attrs (dict "class" "navbar-item ancestor" "aria-current" "true") }}
     {{- end }}
     {{- $name := .Name }}
     {{- with .Identifier }}

@@ -7,9 +7,10 @@
 	"features": {
 		"ghcr.io/devcontainers/features/go:1": {},
 		"ghcr.io/devcontainers/features/hugo:1": {
+			"version": "0.168.0",
 			"extended": true
-		},
-		"ghcr.io/prplecake/devcontainer-features/dart-sass:1": {}
+		}
+		// "ghcr.io/prplecake/devcontainer-features/dart-sass:1": {}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.

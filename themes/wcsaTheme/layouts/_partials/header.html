@@ -1,11 +1,5 @@
 <h1>{{ site.Title }}</h1>
 
-<button id="theme-toggle" class="button is-small" aria-label="Toggle dark mode">
-  <span class="icon">
-    <i id="theme-toggle-icon" class="fas fa-moon"></i>
-  </span>
-</button>
-
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 
 <script>
