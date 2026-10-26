@@ -1,13 +1,14 @@
-{{- with resources.Get "css/main.css" }}
+{{- with resources.Get "css/main.scss" }}
   {{- $opts := dict
-    "minify" (cond hugo.IsDevelopment false true)
-    "sourceMap" (cond hugo.IsDevelopment "linked" "none")
+    "transpiler" "dartsass"
+    "includePaths" (slice "node_modules")
+    "enableSourceMap" hugo.IsDevelopment
   }}
-  {{- with . | css.Build $opts }}
+  {{- with . | css.Sass $opts }}
     {{- if hugo.IsDevelopment }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{- else }}
-      {{- with . | fingerprint }}
+      {{- with . | minify | fingerprint }}
         <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
       {{- end }}
     {{- end }}

@@ -11,17 +11,17 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav class="navbar" role="navigation">
+  <nav class="navbar is-info" role="navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ site.BaseURL }}">
-        <span style="font-weight: bold; border: 3px solid #422bc6;">WCSA</span>
+        <span class="brand-mark">WCSA</span>
       </a>
     </div>
     <div class="navbar-menu is-active">
-      <ul class="navbar-start is-flex">
-        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-      </ul>
       <div class="navbar-end">
+        <ul class="is-flex">
+          {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        </ul>
         <div class="navbar-item">
           <button id="theme-toggle" class="button is-small" aria-label="Toggle dark mode">
             <span class="icon">

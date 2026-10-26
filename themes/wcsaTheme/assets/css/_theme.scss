@@ -1,0 +1,133 @@
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bulma-scheme-h: 227deg;
+  --bulma-scheme-s: 25%;
+  --bulma-scheme-main-l: 100%;
+  --bulma-scheme-main-bis-l: 98%;
+  --bulma-scheme-main-ter-l: 96%;
+  --bulma-scheme-invert-l: 13%;
+  --bulma-scheme-invert-bis-l: 20%;
+  --bulma-scheme-invert-ter-l: 27%;
+  --bulma-background-l: 96%;
+  --bulma-border-weak-l: 92%;
+  --bulma-border-l: 84%;
+
+  --bulma-text-h: 227deg;
+  --bulma-text-s: 46%;
+  --bulma-text-weak-l: 48%;
+  --bulma-text-l: 24%;
+  --bulma-text-strong-l: 18%;
+  --bulma-text-title-l: 13%;
+  --bulma-text-invert-l: 100%;
+  --bulma-text-on-scheme-l: 24%;
+
+  --bulma-primary-h: 227deg;
+  --bulma-primary-s: 61%;
+  --bulma-primary-l: 27%;
+  --bulma-primary-invert-l: 100%;
+  --bulma-primary-light-l: 90%;
+  --bulma-primary-dark-l: 22%;
+
+  --bulma-link-h: 227deg;
+  --bulma-link-s: 61%;
+  --bulma-link-l: 34%;
+  --bulma-link-invert-l: 100%;
+
+  --bulma-info-h: 196deg;
+  --bulma-info-s: 100%;
+  --bulma-info-l: 47%;
+  --bulma-info-invert-h: 227deg;
+  --bulma-info-invert-s: 61%;
+  --bulma-info-invert-l: 13%;
+  --bulma-info-light-l: 91%;
+  --bulma-info-dark-l: 33%;
+
+  --bulma-danger-h: 359deg;
+  --bulma-danger-s: 83%;
+  --bulma-danger-l: 46%;
+  --bulma-danger-invert-l: 100%;
+  --bulma-danger-light-l: 92%;
+  --bulma-danger-dark-l: 34%;
+
+  --bulma-warning-h: 27deg;
+  --bulma-warning-s: 75%;
+  --bulma-warning-l: 56%;
+  --bulma-warning-invert-h: 227deg;
+  --bulma-warning-invert-s: 61%;
+  --bulma-warning-invert-l: 13%;
+  --bulma-warning-light-l: 93%;
+  --bulma-warning-dark-l: 42%;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bulma-scheme-h: 227deg;
+  --bulma-scheme-s: 28%;
+  --bulma-scheme-main-l: 11%;
+  --bulma-scheme-main-bis-l: 14%;
+  --bulma-scheme-main-ter-l: 17%;
+  --bulma-scheme-invert-l: 96%;
+  --bulma-scheme-invert-bis-l: 90%;
+  --bulma-scheme-invert-ter-l: 84%;
+  --bulma-background-l: 14%;
+  --bulma-border-weak-l: 23%;
+  --bulma-border-l: 32%;
+
+  --bulma-text-h: 220deg;
+  --bulma-text-s: 30%;
+  --bulma-text-weak-l: 70%;
+  --bulma-text-l: 87%;
+  --bulma-text-strong-l: 94%;
+  --bulma-text-title-l: 98%;
+  --bulma-text-invert-l: 13%;
+  --bulma-text-on-scheme-l: 87%;
+
+  --bulma-primary-h: 196deg;
+  --bulma-primary-s: 100%;
+  --bulma-primary-l: 47%;
+  --bulma-primary-invert-h: 227deg;
+  --bulma-primary-invert-s: 61%;
+  --bulma-primary-invert-l: 13%;
+  --bulma-primary-light-l: 30%;
+  --bulma-primary-dark-l: 60%;
+
+  --bulma-link-h: 196deg;
+  --bulma-link-s: 100%;
+  --bulma-link-l: 60%;
+  --bulma-link-invert-h: 227deg;
+  --bulma-link-invert-s: 61%;
+  --bulma-link-invert-l: 13%;
+
+  --bulma-info-h: 196deg;
+  --bulma-info-s: 100%;
+  --bulma-info-l: 47%;
+  --bulma-info-invert-h: 227deg;
+  --bulma-info-invert-s: 61%;
+  --bulma-info-invert-l: 13%;
+  --bulma-info-light-l: 30%;
+  --bulma-info-dark-l: 60%;
+
+  --bulma-danger-h: 359deg;
+  --bulma-danger-s: 83%;
+  --bulma-danger-l: 61%;
+  --bulma-danger-invert-l: 13%;
+  --bulma-danger-light-l: 31%;
+  --bulma-danger-dark-l: 72%;
+
+  --bulma-warning-h: 27deg;
+  --bulma-warning-s: 75%;
+  --bulma-warning-l: 65%;
+  --bulma-warning-invert-h: 227deg;
+  --bulma-warning-invert-s: 61%;
+  --bulma-warning-invert-l: 13%;
+  --bulma-warning-light-l: 32%;
+  --bulma-warning-dark-l: 76%;
+}
+
+body {
+  background-color: var(--bulma-scheme-main);
+  color: var(--bulma-text);
+}
